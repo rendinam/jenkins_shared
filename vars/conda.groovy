@@ -37,6 +37,7 @@ def install_conda(version="4.3.31", py_maj_version=3, install_dir="miniconda") {
         return false
     }
 
+    def WORKDIR = pwd()
     def conda_install_dir = "${WORKDIR}/${install_dir}"
     def conda_installer =
         conda_installers["${OSname}-py${py_maj_version}"]
